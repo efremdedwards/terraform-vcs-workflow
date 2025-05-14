@@ -87,7 +87,6 @@ module "ec2_instance" {
   instance_type          = "t3.micro"
   subnet_id              = module.vpc.public_subnets[0]
   vpc_security_group_ids = [module.security_group.security_group_id]
-  key_name               = "vcs-test-kp"
   tags = {
     Name = "public-module-ec2"
   }
